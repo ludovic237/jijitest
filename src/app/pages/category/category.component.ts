@@ -7,10 +7,10 @@ import {ItemElementComponent} from '../../components/All item/item-element/item-
 import {
   ItemElementByCategoryComponent
 } from '../../components/All item/item-element-by-category/item-element-by-category.component';
-import {FilterComponent} from '../../components/All filter/filter/filter.component';
 import {CategorySectionComponent} from '../../components/category-section/category-section.component';
 import {LocationSectionComponent} from '../../components/location-section/location-section.component';
 import {ActivatedRoute} from '@angular/router';
+import {FilterComponent} from '../../components/All filter/filter/filter.component';
 
 @Component({
   selector: 'app-category',

@@ -1,0 +1,169 @@
+<div class="b-app-header-wrapper">
+  <div class="b-app-header--active b-app-header" [ngClass]="{'fw-over-fixed-background ':showMenuCategories}"><!--[-->
+    <div class="container b-app-header__inner">
+      <div class="b-app-header__inner_flex">
+        <div class="h-flex-center h-mr-25 h-pos-rel">
+          <div style="width:24px;height:15px;" (click)="toogleCategories()" class="b-burger-wrapper"><!--[-->
+            <div style="background:#fff;"></div>
+            <div style="background:#fff;"></div>
+            <div style="background:#fff;"></div><!--]-->
+          </div>
+
+          <div class="b-app-header__categories-wrapper">
+            <div class="" *ngIf="showMenuCategories">
+              <div class="h-mb-15">
+                <div class="qa-category-tree b-categories-listing-wrapper">
+                  <div class="b-categories-listing-outer">
+                    <div class="b-categories-listing-inner">
+                      <div class="b-categories-listing__item b-categories-listing__parents">
+                        <div class="b-categories-listing__item__inner h-hide-scrollbar">
+                          <div class="b-scrolling-helper"><!---->
+                            <div class="b-scrolling-helper__content">
+                              <a *ngFor="let item of data.categories" href="/vehicles"
+                                 [ngClass]="{ 'b-categories-item--active': null}"
+                                 class=" qa-category-parent-item b-categories-item h-flex-center"
+                                 data-index="0">
+                                <div class="b-categories-item__image h-flex-center">
+                                  <div class="b-static-image" style="height: 32px; width: 32px;"><img class="icon"
+                                                                                                      height="32px"
+                                                                                                      width="32px"
+                                                                                                      src="{{item.image_v2}}"
+                                                                                                      alt="Vehicles"
+                                                                                                      style=""></div>
+                                </div>
+                                <div class="b-categories-item__text h-flex-1-0" (mouseenter)="onHoverMenu(item.name)"
+                                     (mouseleave)="onLeaveMenu(item.name)"><span
+                                  class="b-categories-item__text-name qa-category-parent-name">{{item.name}}</span><span
+                                  class="b-categories-item__text-count">323,154 ads</span></div>
+                                <div class="b-categories-item__arrow h-flex-center">
+                                  <i class="icons fas fa-chevron-right" style="color: #99B2BF" height="24px" width="24px"></i>
+                                </div>
+                              </a>
+                            </div>
+<!--                            <div class="b-scrolling-helper__edge b-scrolling-helper__edge&#45;&#45;bottom">-->
+<!--                              <svg class="icons" color="#808080" height="20px" width="20px">&lt;!&ndash;&ndash;&gt;&lt;!&ndash;&ndash;&gt;-->
+<!--                                <use href="/nuxt/icons.Dd8-_jxv.svg#bottom"-->
+<!--                                     xlink:href="/nuxt/icons.Dd8-_jxv.svg#bottom"></use>-->
+<!--                              </svg>-->
+<!--                            </div>-->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="qa-categories-sub-tree b-categories-listing__item b-categories-listing__childes"
+                           *ngIf="showSubMenuCategories">
+                        <div class="b-categories-listing__item__inner">
+                          <div class="b-scrolling-helper"><!---->
+                            <div class="b-scrolling-helper__content">
+                              <a *ngFor="let item of subMenu" href="/new-builds"
+                                 class="qa-category-sub-item b-categories-item h-flex-center"
+                                 data-index="0">
+                                <div class="b-categories-item__image h-flex-center">
+                                  <div class="b-static-image" style="height: 32px; width: 32px;"><img class="icon"
+                                                                                                      height="32px"
+                                                                                                      width="32px"
+                                                                                                      src="{{item.image_v2}}"
+                                                                                                      alt="New Builds"
+                                                                                                      style=""></div>
+                                </div>
+                                <div class="b-categories-item__text h-flex-1-0"><span
+                                  class="b-categories-item__text-name qa-category-parent-name">{{item.name}}</span><span
+                                  class="b-categories-item__text-count">5,523 ads</span></div>
+                                <div class="b-categories-item__arrow h-flex-center"><!----></div>
+                              </a>
+                            </div><!----></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="/public" class="h-dinline-flex h-pointer" aria-label="Home">
+          <svg class="icons h-mr-3" color="#fff" height="40px" width="44px"><!----><!---->
+            <use href="/nuxt/icons.Dd8-_jxv.svg#logo-jiji"
+                 xlink:href="/nuxt/icons.Dd8-_jxv.svg#logo-jiji"></use>
+          </svg>
+        </a><!----></div>
+      <div class="b-app-header__search"><!--[-->
+        <div>
+          <div
+            class="fw-search fw-search--rounded fw-search--extra-button fw-search--size-small search-with-suggestions--options-hidden search-with-suggestions b-app-header__search-with-suggestions">
+            <!--[--><!----><!--]-->
+            <div tabindex="-1" class="multiselect" role="combobox" aria-expanded="false"
+                 aria-owns="listbox-null"><!--[-->
+              <div class="multiselect__select"></div><!--]--><!--[--><!--]-->
+              <div class="multiselect__tags"><!--[-->
+                <div class="multiselect__tags-wrap" style="display:none;"><!--[--><!--]--></div>
+                <!--v-if--><!--]-->
+                <div class="multiselect__spinner" style="display:none;"></div>
+                <input name="" type="text" autocomplete="off" spellcheck="false"
+                       placeholder="Search in Vehicles" style="width:100%;"
+                       value="" tabindex="0" aria-label="-searchbox" class="multiselect__input"
+                       aria-controls="listbox-null"><!--v-if-->
+
+              </div>
+              <div class="multiselect__content-wrapper" tabindex="-1"
+                   style="max-height:300px;display:none;">
+                <ul class="multiselect__content" style="display:block;" role="listbox" id="listbox-null"
+                    aria-multiselectable="false"><!--[--><!--]--><!--v-if--><!--[--><!--]-->
+                  <li style="display:none;"><span class="multiselect__option"><!--[--><span></span>
+                    <!--]--></span></li>
+                  <li><span class="multiselect__option"><!--[--><span></span><!--]--></span></li><!--[-->
+                  <!--]--></ul>
+              </div>
+            </div>
+            <div class="fw-search__right-container">
+              <div class="fw-search__extra-button"><!--[--><!--[-->
+                <svg class="icons h-pointer qa-add-search-to-favorite" width="24px" height="24px"
+                     color="#00B53F"><!----><!---->
+                  <use href="/nuxt/icons.Dd8-_jxv.svg#tab-saved-outlined"
+                       xlink:href="/nuxt/icons.Dd8-_jxv.svg#tab-saved-outlined"></use>
+                </svg><!--]--><!--]--><!----></div>
+              <button
+                class="fw-button qa-fw-button fw-button--type-white fw-button--size-medium fw-search__search-button"
+                type="button" aria-label="Search"><span class="fw-button__content"><!----><span
+                class="fw-button__slot-wrapper"><!--[--><div class="fw-search__icon"><svg class="icons"
+                                                                                          color="#6C8EA0"
+                                                                                          height="20px"
+                                                                                          width="20px"><!---->
+                <!----><use href="/nuxt/icons.Dd8-_jxv.svg#search-tiny"
+                            xlink:href="/nuxt/icons.Dd8-_jxv.svg#search-tiny"></use></svg></div>
+                <!--]--></span></span></button>
+            </div>
+          </div>
+          <svg class="icons b-app-header__search-icon" width="20px" height="20px" color="#fff"><!---->
+            <!---->
+            <use href="/nuxt/icons.Dd8-_jxv.svg#search"
+                 xlink:href="/nuxt/icons.Dd8-_jxv.svg#search"></use>
+          </svg><!----></div><!--]--></div>
+      <div class="b-app-header__title">
+        <div class="b-app-header__title-text">Sell faster</div>
+        <div class="b-app-header__title-text">Buy smarter</div>
+      </div>
+      <div class="b-app-header__user-bar"><!--[-->
+        <div class="h-mh-15">
+          <div class="b-app-header-profile__wrapper">
+            <div class="b-app-header-profile__inner"><!--[--><span
+              class="b-app-header-profile__item__text b-app-header-profile-menu-item h-dflex"><a
+              (click)="showSignInForm()" class="h-flex-center" style=""><!--[--><!--[--><!----><!--[--><div>Sign in</div>
+              <!--]--><!--]--><!----><!--]--></a></span><span
+              class="b-app-header-profile__item__text b-app-header-profile-menu-item h-dflex" ><a
+              (click)="showRegisterForm()" role="button" class="h-flex-center" style=""><!--[--><!--[--><!----><!--[--><div>Registration</div>
+              <!--]--><!--]--><!----><!--]--></a></span><!--]--></div>
+          </div>
+        </div>
+        <div class="h-mh-15">
+          <div class="h-width-120">
+            <button
+              class="fw-button qa-fw-button fw-button--type-bloated-warning fw-button--size-medium h-width-100p h-uppercase qa-header-sell"
+              type="button"><span class="fw-button__content"><!----><span class="fw-button__slot-wrapper"><!--[-->Sell
+              <!--]--></span></span></button>
+          </div>
+        </div><!--]--></div><!----></div><!--]--></div>
+</div>
+<div class="fw-fixed-background" *ngIf="showBackground" (click)="showBackgroundModal()"></div>
+
+<app-register-email-password *ngIf="showRegister" ></app-register-email-password>
+<app-login *ngIf="showSignIn" ></app-login>

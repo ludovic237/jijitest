@@ -1,0 +1,49 @@
+<ul class="b-categories-blocks-list b-main-page__categories-block-list">
+  <li class="b-categories-block-item b-categories-block-item--post-ad qa-categories-post-ad"><a href="/"
+                                                                                                class="b-categories-block-item__inner"><span
+    class="b-categories-block-item__inner-icon b-categories-block-item__inner-icon--yellow"><svg class="icons"
+                                                                                                 height="32px"
+                                                                                                 width="32px"
+                                                                                                 color="#FFFFFF"><!---->
+    <!----><use href="/nuxt/icons.Dd8-_jxv.svg#cat-color-post-ad"
+                xlink:href="/nuxt/icons.Dd8-_jxv.svg#cat-color-post-ad"></use></svg></span>
+    <p class="b-categories-block-item__name">Post ad</p></a></li>
+  <li
+    class="b-categories-block-item b-categories-block-item--image b-categories-block-item--trending qa-categories-trending">
+    <a href="/" class="b-categories-block-item__inner"><span class="b-categories-block-item__inner-icon"><!--[-->🔥
+      <!--]--></span>
+      <p class="b-categories-block-item__name">Trending</p></a></li><!--[-->
+  <li class="b-categories-block-item b-categories-block-item--image"><a class="b-categories-block-item__inner">
+    <div class="b-static-image h-pos-ab" style="height:60px;width:60px;"><img style="" class="icon" height="60px"
+                                                                              width="60px"
+                                                                              src="https://assets.jijistatic.net/art/attributes/categories/vehicles-x3.png"
+                                                                              alt="Vehicles"></div>
+    <p class="b-categories-block-item__name">Vehicles</p></a></li>
+  <li class="b-categories-block-item b-categories-block-item--image"><a class="b-categories-block-item__inner">
+    <div class="b-static-image h-pos-ab" style="height:60px;width:60px;"><img style="" class="icon" height="60px"
+                                                                              width="60px"
+                                                                              src="https://assets.jijistatic.net/art/attributes/categories/property-x3.png"
+                                                                              alt="Property"></div>
+    <p class="b-categories-block-item__name">Property</p></a></li>
+  <li class="b-categories-block-item b-categories-block-item--image"><a class="b-categories-block-item__inner">
+    <div class="b-static-image h-pos-ab" style="height:60px;width:60px;"><img style="" class="icon" height="60px"
+                                                                              width="60px"
+                                                                              src="https://assets.jijistatic.net/art/attributes/categories/phones-x3.png"
+                                                                              alt="Mobile Phones &amp; Tablets"></div>
+    <p class="b-categories-block-item__name">Mobile Phones &amp; Tablets</p></a></li>
+
+
+  @for(item of items;track item.id) {
+  <li class="b-categories-block-item b-categories-block-item--image"><a
+    class="b-categories-block-item__inner">
+    <div class="b-static-image h-pos-ab" style="height:60px;width:60px;"><img style="" class="icon" height="60px"
+                                                                              width="60px"
+                                                                              src="https://assets.jijistatic.net/art/attributes/categories/repair-x3.png"
+                                                                              alt="Repair &amp; Construction"></div>
+    <p class="b-categories-block-item__name">{{item.name}}</p></a>
+  </li>
+  }
+  <!--]--><!----></ul>
+
+
+
