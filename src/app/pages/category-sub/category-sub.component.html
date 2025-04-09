@@ -1,0 +1,291 @@
+<div id="__nuxt">
+  <div>
+    <img src="/tre.gif" alt="tre.gif" width="1px" height="1px" class="h-hide-image">
+    <div id="js-stickers-wrapper" class="b-stickers-wrapper"></div>
+    <div class="b-body-wrapper js-body-wrapper">
+      <div class="h-bg-jiji-body h-min-height-100p h-width-100p h-flex">
+        <div class="b-app__wrapper">
+          <div class="b-content-wrapper" style="background-color:;">
+            <!--[-->
+            <!--[-->
+            <div>
+              <app-header2></app-header2>
+              <div class="container h-mt-10">
+                <!---->
+                <ol class="qa-bread-crumbs b-breadcrumb-wrapper h-no-text-overflow h-pb-10" vocab="http://schema.org/" typeof="BreadcrumbList">
+                  <!--[-->
+                  <li class="b-breadcrumb-inner" property="itemListElement" typeof="ListItem">
+                    <a href="/" class="qa-bread-crumbs-link b-breadcrumb-link" property="item" typeof="WebPage">
+                      <span property="name">Jiji</span>
+                    </a>
+                    <meta property="position" content="1">
+                  </li>
+                  <li class="b-breadcrumb-inner" property="itemListElement" typeof="ListItem">
+                    <a href="/vehicles" class="qa-bread-crumbs-link b-breadcrumb-link" property="item" typeof="WebPage">
+                      <span property="name">Vehicles</span>
+                    </a>
+                    <meta property="position" content="2">
+                  </li>
+                  <li class="b-breadcrumb-inner" property="itemListElement" typeof="ListItem">
+                    <div property="item" typeof="WebPage" class="b-breadcrumb-link--current-url h-disable-link qa-bread-crumbs-link b-breadcrumb-link">
+                                                    <span property="name">
+                                                        117604 results for <strong>Cars </strong>
+                                                        in Nigeria
+                                                    </span>
+                    </div>
+                    <meta property="position" content="3">
+                  </li>
+                  <!--]-->
+                </ol>
+                <span></span>
+                <div class="h-dflex">
+                  <div class="b-filters-wrapper">
+                    <!--[-->
+                    <!--[-->
+                    <div class="b-categories-section">
+                      <div class="b-categories-section__header">Categories</div>
+                      <div class="b-categories-section-list">
+                        <div class="b-categories-section-list__parent-category">
+                          <div class="b-categories-section-list__name h-pointer">Vehicles</div>
+                        </div>
+                        <ul class="b-categories-section-list__list">
+                          <!--[-->
+                          <li class="b-categories-section-item">
+                            <a href="/cars" class="b-categories-section-item__link b-categories-section-item__link--active">
+                              <div class="b-categories-section-item__name">Cars</div>
+                              <div class="b-categories-section-item__adverts-count">| 117470</div>
+                            </a>
+                          </li>
+                          <li class="b-categories-section-item">
+                            <a href="/buses" class="b-categories-section-item__link">
+                              <div class="b-categories-section-item__name">Buses &amp;Microbuses</div>
+                              <div class="b-categories-section-item__adverts-count">| 6259</div>
+                            </a>
+                          </li>
+                          <li class="b-categories-section-item">
+                            <a href="/heavy-equipments-machinery" class="b-categories-section-item__link">
+                              <div class="b-categories-section-item__name">Heavy Equipment</div>
+                              <div class="b-categories-section-item__adverts-count">| 2322</div>
+                            </a>
+                          </li>
+                          <li class="b-categories-section-item">
+                            <a href="/motorcycles-and-scooters" class="b-categories-section-item__link">
+                              <div class="b-categories-section-item__name">Motorcycles &amp;Scooters</div>
+                              <div class="b-categories-section-item__adverts-count">| 2719</div>
+                            </a>
+                          </li>
+                          <!--]-->
+                        </ul>
+                        <div class="b-categories-section-list__show_all-wrapper h-pointer">
+                          <!--[-->
+                          Show all 8
+                          <!--]-->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="b-choose-location-section h-mb-15">
+                      <div class="qa-choose-location b-choose-location-section__inner h-pointer">
+                        <div class="b-choose-location-section__right h-max-width-100p">
+                          <div class="b-choose-location-section__heading">Location</div>
+                          <div class="b-choose-location-section__current-location">All Nigeria</div>
+                        </div>
+                        <svg class="icons" width="6px" height="10px" color="#6C8EA0">
+                          <!---->
+                          <!---->
+                          <use href="/nuxt/icons.Dd8-_jxv.svg#arrow-right" xlink:href="/nuxt/icons.Dd8-_jxv.svg#arrow-right"></use>
+                        </svg>
+                      </div>
+                      <!---->
+                    </div>
+                    <!--]-->
+                    <div>
+                      <div class="b-filter-attributes">
+                        <!---->
+                        <!--[-->
+                        <app-filter-by-radio-button-with-range-with-save [items]=datasFilters[0] (filterChanged)="updateFilter('price', $event)"></app-filter-by-radio-button-with-range-with-save>
+                        <app-filter-by-radio-button-with-search [items]=datasFilters[1] (filterChanged)="updateFilter('make', $event)"></app-filter-by-radio-button-with-search>
+                        <app-filter-by-checkbox-multiple-with-search [items]=datasFilters[2] (filterChanged)="updateFilter('model', $event)"></app-filter-by-checkbox-multiple-with-search>
+                        <app-filter-by-radio-button-with-range-with-save [items]=datasFilters[3] (filterChanged)="updateFilter('Year of Manufacture', $event)"></app-filter-by-radio-button-with-range-with-save>
+                        <app-filter-by-checkbox-multiple [items]=datasFilters[4] (filterChanged)="updateFilter('condition', $event)"></app-filter-by-checkbox-multiple>
+                        <app-filter-by-checkbox-multiple [items]=datasFilters[5] (filterChanged)="updateFilter('transmission', $event)"></app-filter-by-checkbox-multiple>
+                        <app-filter-by-range-with-save [items]=datasFilters[6] (filterChanged)="updateFilter('mileage', $event)"></app-filter-by-range-with-save>
+                        <app-filter-by-radio-button [items]=datasFilters[7] (filterChanged)="updateFilter('Registered Car', $event)"></app-filter-by-radio-button>
+                        <app-filter-by-checkbox-multiple-with-search [items]=datasFilters[8] (filterChanged)="updateFilter('body', $event)"></app-filter-by-checkbox-multiple-with-search>
+                        <app-filter-by-checkbox-multiple-with-search [items]=datasFilters[9] (filterChanged)="updateFilter('Second Condition', $event)"></app-filter-by-checkbox-multiple-with-search>
+                        <app-filter-by-checkbox-multiple-with-search [items]=datasFilters[10] (filterChanged)="updateFilter('color', $event)"></app-filter-by-checkbox-multiple-with-search>
+                        <app-filter-by-checkbox-multiple-with-search [items]=datasFilters[11] (filterChanged)="updateFilter('engine size', $event)"></app-filter-by-checkbox-multiple-with-search>
+                        <app-filter-by-checkbox-multiple-with-search [items]=datasFilters[12] (filterChanged)="updateFilter('fuel', $event)"></app-filter-by-checkbox-multiple-with-search>
+                        <app-filter-by-radio-button [items]=datasFilters[13] (filterChanged)="updateFilter('exchange possible', $event)"></app-filter-by-radio-button>
+                        <app-filter-by-checkbox-multiple-with-search [items]=datasFilters[14] (filterChanged)="updateFilter('key feature', $event)"></app-filter-by-checkbox-multiple-with-search>
+                        <app-filter-by-radio-button [items]=datasFilters[15] (filterChanged)="updateFilter('verified cars', $event)"></app-filter-by-radio-button>
+                        <app-filter-by-radio-button [items]=datasFilters[16] (filterChanged)="updateFilter('verified sellers', $event)"></app-filter-by-radio-button>
+                        <app-filter-by-radio-button [items]=datasFilters[17] (filterChanged)="updateFilter('discount', $event)"></app-filter-by-radio-button>
+                        <!--]-->
+                        <!---->
+                      </div>
+                    </div>
+                    <span></span>
+                    <!--]-->
+                  </div>
+                  <div class="b-listing-wrapper h-flex b-adverts-listing__inner">
+                    <div class="h-pos-rel">
+                      <div>
+                        <div class="b-banner__wrapper h-mb-16">
+                          <!--[-->
+                          <a href="/login.html?url=/profile/inspections/new" rel="nofollow" target="_blank" is-open-in-new-tab="false" class="b-banner__item" aria-label="Banner">
+                            <div class="b-static-image" style="height:72px;width:320px;">
+                              <img class="icon" height="72px" width="320px" src="https://pictures-nigeria.jijistatic.net/JIJI-13466/1e8099f0dca54d129a7080a8b81d8842" alt="Banner">
+                            </div>
+                          </a>
+                          <a href="/price-valuation?categoryId=29" rel="nofollow" target="_blank" class="b-banner__item" aria-label="Banner">
+                            <!--[-->
+                            <div class="b-static-image" style="height:72px;width:320px;">
+                              <img class="icon" height="72px" width="320px" src="https://pictures-nigeria.jijistatic.net/JIJI-13466/376d8c233aa44b04aac452d33c804ef5" alt="Banner">
+                            </div>
+                            <!--]-->
+                          </a>
+                          <a href="/cars?filter_inspection=Inspected" rel="nofollow" target="_blank" is-open-in-new-tab="false" class="b-banner__item" aria-label="Banner">
+                            <div class="b-static-image" style="height:72px;width:320px;">
+                              <img class="icon" height="72px" width="320px" src="https://pictures-nigeria.jijistatic.net/JIJI-13466/3c3ea90c01264bd6a1e85e52a6bfc103" alt="Banner">
+                            </div>
+                          </a>
+                          <!--]-->
+                        </div>
+                        <h1 class="h-mb-12 h-mt-0 h-font-26">Cars in Nigeria</h1>
+                        <!--[-->
+                        <div class="b-filters-top-selection">
+                          <!--[-->
+                          <app-item-selection-price-range [items]=rangePrices></app-item-selection-price-range>
+                          <div class="h-flex-space-between b-filters-top-selection__row">
+                            <!--[-->
+<!--                            @for(mark of marks;track mark.name) {-->
+<!--                            <app-item-selection-mark [item]=mark></app-item-selection-mark>-->
+<!--                            }-->
+                            <!--]-->
+                          </div>
+                          <!--]-->
+                        </div>
+                        <!---->
+                        <!---->
+                        <!---->
+                        <div class="h-pv-10 h-dflex h-flex-cross-center h-flex-space-between">
+                          <div class="b-adverts-listing-change-view">
+                            <svg class="icons b-adverts-listing-change-view__icon" color="#00B53F" height="15px" width="15px">
+                              <!---->
+                              <!---->
+                              <use href="/nuxt/icons.Dd8-_jxv.svg#gallery-type" xlink:href="/nuxt/icons.Dd8-_jxv.svg#gallery-type"></use>
+                            </svg>
+                            <svg class="icons b-adverts-listing-change-view__icon" color="#6C8EA0" height="16px" width="16px">
+                              <!---->
+                              <!---->
+                              <use href="/nuxt/icons.Dd8-_jxv.svg#list-type" xlink:href="/nuxt/icons.Dd8-_jxv.svg#list-type"></use>
+                            </svg>
+                          </div>
+                          <div class="b-adverts-nav__sort-group b-adverts-nav__sort-group--no-margin">
+                            <div class="h-dflex h-flex-cross-center">
+                              Sort by:
+                              <div class="b-adverts-nav__sort-group__container h-flex-center h-ml-10">
+                                <div class="fw-menu js-fw-menu qa-fw-menu">
+                                  <!--[-->
+                                  <div class="b-adverts-nav__sort-group__element qa-sorting-submenu-opener" fw-menu-trigger>
+                                    <svg class="icons" height="15px" width="20px" color="#00B53F">
+                                      <!---->
+                                      <!---->
+                                      <use href="/nuxt/icons.Dd8-_jxv.svg#sort" xlink:href="/nuxt/icons.Dd8-_jxv.svg#sort"></use>
+                                    </svg>
+                                    Recommended
+                                  </div>
+                                  <div style="z-index:8;" class="fw-popper">
+                                    <!---->
+                                  </div>
+                                  <!--]-->
+                                </div>
+                                <div class="fw-menu js-fw-menu qa-fw-menu">
+                                  <!--[-->
+                                  <div class="b-adverts-nav__sort-group__element b-adverts-nav__sort-group__element--no-delimeter qa-sorting-by-time-submenu-opener" fw-menu-trigger>
+                                    <svg class="icons" height="15px" width="15px" color="#00B53F">
+                                      <!---->
+                                      <!---->
+                                      <use href="/nuxt/icons.Dd8-_jxv.svg#clock" xlink:href="/nuxt/icons.Dd8-_jxv.svg#clock"></use>
+                                    </svg>
+                                    Any time
+                                  </div>
+                                  <div style="z-index:8;" class="fw-popper">
+                                    <!---->
+                                  </div>
+                                  <!--]-->
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--]-->
+                        <!---->
+                        <div class="b-advert-listing js-advert-listing qa-advert-listing">
+                          <!---->
+                          <!--[-->
+                          <div>
+                            <div class="masonry-wall b-list-advert__gallery" style="">
+                              <!--[-->
+                              <div class="masonry-column" style="width: 33.3333%;">
+                                <div data-column="0">
+                                  @for(product of products1;track product.id) {
+                                  <app-item-element-by-category [item]=product ></app-item-element-by-category>
+                                  }
+                                </div>
+                              </div>
+                              <div class="masonry-column" style="width: 33.3333%;">
+                                <div data-column="1">
+                                  @for(product of products2;track product.id) {
+                                  <app-item-element-by-category [item]=product ></app-item-element-by-category>
+                                  }
+                                </div>
+                              </div>
+                              <div class="masonry-column" style="width: 33.3333%;">
+                                <div data-column="2">
+                                  @for(product of products3;track product.id) {
+                                  <app-item-element-by-category [item]=product ></app-item-element-by-category>
+                                  }
+                                </div>
+                              </div><!--]-->
+                              <!--]-->
+                            </div>
+                          </div>
+                          <!--]-->
+                        </div>
+                        <!---->
+                        <!---->
+                        <!---->
+                        <!---->
+                        <!---->
+                      </div>
+                      <!---->
+                    </div>
+                  </div>
+                </div>
+                <span></span>
+              </div>
+              <!---->
+            </div>
+            <!--]-->
+            <!--]-->
+            <!---->
+            <!---->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <!---->
+      <span></span>
+      <div>
+        <!---->
+      </div>
+      <!---->
+      <span></span>
+    </div>
+    <img src="/api_web/v1/frame_left.gif" alt="frame_left.gif" width="1px" height="1px" class="h-hide-image">
+  </div>
+</div>
+<div id="teleports"></div>
+
