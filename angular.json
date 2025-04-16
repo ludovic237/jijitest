@@ -27,16 +27,7 @@
               }
             ],
             "styles": [
-              "src/styles.css",
-              "src/assets/css/AdvertItemPage.By1X6XNK.css",
-              "src/assets/css/CreateAdPage.DyZjheKH.css",
-              "src/assets/css/default-custom-header.DL93suWI.css",
-              "src/assets/css/entry.D0_I9AXH.css",
-              "src/assets/css/FavoritesAdverts.lT-3zHja.css",
-              "src/assets/css/MessengerPage.DcUi3ZbM.css",
-              "src/assets/css/Notifications.B6JSQADf.css",
-              "src/assets/css/ProfilePage.DH3uqv1I.css",
-              "src/assets/css/shared.DDZK-Fda.css"
+              "src/styles.css"
             ],
             "scripts": []
           },

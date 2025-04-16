@@ -1,0 +1,37 @@
+<p>invoice-generator works!</p>
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Générer une facture</h4>
+
+    <form [formGroup]="invoiceForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="tenantId">ID du locataire</label>
+        <input type="text" id="tenantId" formControlName="tenantId" class="form-control" />
+      </div>
+
+      <div class="mb-3">
+        <label for="type">Type de facture</label>
+        <select id="type" formControlName="type" class="form-select">
+          <option *ngFor="let type of invoiceTypes" [value]="type">{{ type }}</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="label">Libellé</label>
+        <input type="text" id="label" formControlName="label" class="form-control" />
+      </div>
+
+      <div class="mb-3">
+        <label for="amount">Montant (XAF)</label>
+        <input type="number" id="amount" formControlName="amount" class="form-control" />
+      </div>
+
+      <div class="mb-3">
+        <label for="dueDate">Date d’échéance</label>
+        <input type="date" id="dueDate" formControlName="dueDate" class="form-control" />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Créer la facture</button>
+    </form>
+  </div>
+</div>

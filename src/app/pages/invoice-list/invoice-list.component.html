@@ -1,0 +1,32 @@
+<!--<h3>Factures de {{ tenant.fullName }}</h3>-->
+<h3>Liste des factures</h3>
+<table *ngIf="invoices.length > 0; else noInvoice">
+  <thead>
+  <tr>
+    <th>Locataire</th>
+    <th>Type</th>
+    <th>Libellé</th>
+    <th>Montant</th>
+    <th>Échéance</th>
+    <th>Statut</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let invoice of invoices">
+    <td>{{ invoice.tenantId }}</td>
+    <td>{{ invoice.type }}</td>
+    <td>{{ invoice.label }}</td>
+    <td>{{ invoice.amount | currency:'EUR' }}</td>
+    <td>{{ invoice.dueDate | date:'shortDate' }}</td>
+    <td>
+        <span [ngClass]="{ 'text-success': invoice.paid, 'text-danger': !invoice.paid }">
+          {{ invoice.paid ? 'Payée' : 'En attente' }}
+        </span>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<ng-template #noInvoice>
+  <p>Aucune facture trouvée pour ce locataire.</p>
+</ng-template>
